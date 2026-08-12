@@ -31,6 +31,13 @@ export default function App() {
   );
 }
 
+function PLayerScreen(){
+
+}
+
+function GameScreen(){
+
+}
 const styles = StyleSheet.create({
   container: {
     flex: 1,
