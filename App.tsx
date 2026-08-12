@@ -21,6 +21,12 @@ export default function App() {
        onChangeText={setPlayer2}
         style={styles.input}
      />
+     <Button 
+       title="Start Game"
+       onPress={() => console.log( `Player 1: ${player1}, Player 2: ${player2}`)}
+         // Game start logic would go here
+       
+     />
     </View>
   );
 }
@@ -28,7 +34,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
   },
