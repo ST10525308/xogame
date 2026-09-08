@@ -1,5 +1,6 @@
+// App.tsx
 import { useState } from 'react';
-import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 
 export default function App() {
   const [player1, setPlayer1] = useState<string>('');
@@ -7,43 +8,36 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-     <Text style={styles.title}>Welcome to Tic-Tac-Toe!</Text>
-     
-     <TextInput 
-       placeholder="Player 1 Name"
-       value={player1}
-       onChangeText={setPlayer1}
-       style={styles.input}
-     />
-     <TextInput 
-       placeholder="Player 2 Name"
-       value={player2}
-       onChangeText={setPlayer2}
+      <Text style={styles.title}>Welcome to Tic-Tac-Toe!</Text>
+
+      <TextInput
+        placeholder="Player 1 Name"
+        value={player1}
+        onChangeText={setPlayer1}
         style={styles.input}
-     />
-     <Button 
-       title="Start Game"
-       onPress={() => console.log( `Player 1: ${player1}, Player 2: ${player2}`)}
-         // Game start logic would go here
-       
-     />
+      />
+      <TextInput
+        placeholder="Player 2 Name"
+        value={player2}
+        onChangeText={setPlayer2}
+        style={styles.input}
+      />
+
+      <Button
+        title="Start Game"
+        onPress={() => console.log(`Player 1: ${player1}, Player 2: ${player2}`)}
+      />
     </View>
   );
 }
 
-function PLayerScreen(){
-
-}
-
-function GameScreen(){
-
-}
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    padding: 16,
   },
   title: {
     fontSize: 24,
@@ -52,7 +46,7 @@ const styles = StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderColor: '#CCC',
+    borderColor: '#ccc',
     paddingHorizontal: 12,
     paddingVertical: 8,
     marginVertical: 8,
